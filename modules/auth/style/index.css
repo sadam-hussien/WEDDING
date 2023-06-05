@@ -1,0 +1,84 @@
+.auth-page .auth-container {
+  padding: calc(var(--space-lg) * 2);
+}
+
+/* header  */
+.auth-header {
+  margin-bottom: var(--space-lg);
+}
+
+.auth-header .back-btn {
+  --size: 40px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 1px solid rgba(var(--bs-dark-rgb), 0.1);
+  color: var(--dark);
+  font-size: 1.5rem;
+}
+
+.auth-header .account-option::first-letter {
+  text-transform: uppercase;
+}
+
+.auth-header .account-option {
+  font-size: 0.94rem;
+  color: var(--dark);
+}
+
+.auth-header .account-option-link {
+  margin-inline-start: 5px;
+  color: var(--primary);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.auth-title {
+  margin-bottom: var(--space-md);
+}
+
+.auth-title .auth-title-text {
+  margin-bottom: var(--space-sm);
+  color: var(--dark);
+}
+
+.auth-title .auth-subtitle-text {
+  color: var(--bs-gray);
+}
+
+.auth-footer .dropdown-toggle:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.auth-footer .dropdown-toggle::after {
+  all: unset;
+}
+
+.auth-footer .dropdown-toggle .text,
+.auth-footer .dropdown-item .text {
+  color: var(--bs-gray);
+}
+
+.auth-footer .dropdown-toggle .flat,
+.auth-footer .dropdown-item .flat {
+  max-width: 25px;
+}
+
+.auth-footer .dropdown-toggle .icon {
+  color: var(--bs-gray-500);
+  font-size: 1.2rem;
+  margin-bottom: -2px;
+}
+
+.auth-footer .dropdown-item:lang(ar) {
+  text-align: right;
+}
+
+.forget-passowrd {
+  color: var(--bs-gray);
+}
+
+.forget-passowrd:hover {
+  color: var(--dark);
+}

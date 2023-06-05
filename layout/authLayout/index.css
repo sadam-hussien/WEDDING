@@ -1,0 +1,19 @@
+.auth-page .layout-bg {
+  position: fixed;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  background-image: linear-gradient(
+      to top left,
+      rgba(var(--primary-rgb) / 0.2),
+      rgba(var(--primary-rgb) / 0.8)
+    ),
+    url(/images/auth-bg.jpg);
+  background-size: cover;
+  transform-origin: bottom;
+  transform: skew(10deg);
+}
+
+.auth-page {
+  padding-top: calc(var(--header-height) + var(--space-lg) * 2);
+}

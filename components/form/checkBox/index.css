@@ -1,0 +1,68 @@
+.check-input {
+  margin-bottom: var(--space-md);
+}
+
+.check-input-label {
+  margin-bottom: var(--space-sm);
+  color: var(--dark);
+}
+
+.check-input-box label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--bs-white);
+  height: 40px;
+  padding: 0 var(--space-sm);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border);
+  color: var(--gray);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.check-input-box label:hover {
+  border-color: var(--primary);
+}
+
+.check-input-circle {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border: inherit;
+  border-radius: 2px;
+  transition: 0.1s;
+}
+
+.check-input-circle::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  background: var(--bs-white);
+  border-radius: inherit;
+}
+
+.check-input-text {
+  /* color: ; */
+}
+
+.check-input-box label:hover .check-input-text {
+  color: var(--dark);
+}
+
+.check-input-box input:checked + label {
+  border-color: var(--primary);
+}
+
+.check-input-box input:checked + label .check-input-circle::after {
+  background-color: var(--primary);
+}
+
+.check-input-box input:disabled + label {
+  pointer-events: none;
+  background-color: #e9ecef;
+}

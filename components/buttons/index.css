@@ -1,0 +1,54 @@
+/* ***************************** button with icon ****************  */
+.btn-with-icon {
+  min-width: 200px;
+  height: 42px;
+  background-color: var(--primary);
+  padding-inline-end: var(--space-lg);
+}
+
+.btn-with-icon.btn-danger {
+  background-color: var(--danger);
+  border-color: var(--danger);
+}
+
+.btn-with-icon.btn-danger:hover {
+  background-color: var(--danger-secondary);
+}
+
+.btn-with-icon-icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(var(--bs-white-rgb), 0.2);
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
+
+.btn-with-icon-icon:lang(ar) {
+  right: auto;
+  left: 5px;
+}
+
+/* normal  btn */
+.normal-btn {
+  min-width: 120px;
+  padding: 0 var(--space-md);
+  height: 42px;
+}
+
+/* back btn  */
+.back-btn {
+  color: var(--gray);
+  transition: 0.3s;
+}
+
+.back-btn .text {
+  margin-inline-start: var(--space-sm);
+}
+
+.back-btn:hover {
+  color: var(--dark);
+}

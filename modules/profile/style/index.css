@@ -1,0 +1,35 @@
+.profile-form {
+  min-height: calc(
+    100vh - (var(--header-height) + var(--space-lg) + var(--space-lg))
+  );
+}
+
+.profile-form-footer {
+  /* font-size: var(--font-size-sm); */
+  color: var(--gray);
+}
+
+.profile-form-footer .icon {
+  font-size: 25px;
+  margin-bottom: -3px;
+}
+
+/* .profile-form-tab-fields {
+  box-shadow: var(--shadow-el);
+  background: var(--bs-white);
+} */
+
+.remove-btn,
+.add-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  background: rgba(var(--danger-rgb) / 0.1);
+  color: var(--danger);
+  font-size: 25px;
+}
+
+.add-btn {
+  background: rgba(var(--primary-rgb) / 0.1);
+  color: var(--primary);
+}

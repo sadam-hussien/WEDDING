@@ -1,0 +1,41 @@
+.main-header {
+  height: var(--header-height);
+  background: var(--bs-white);
+  box-shadow: var(--shadow-el);
+}
+
+.main-header__login {
+  min-width: 140px;
+  height: 42px;
+  border-radius: 42px;
+  background-color: var(--primary);
+  color: var(--bs-white);
+}
+
+.main-header__profile {
+  padding-inline-start: 45px;
+}
+
+.main-header__profile span {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background-color: var(--bs-white);
+  border-radius: 50%;
+  color: var(--primary);
+  font-size: 25px;
+}
+
+.main-header__profile span i {
+  margin-top: -5px;
+}
+
+.main-header__nav-item {
+  color: var(--dark);
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  cursor: pointer;
+}

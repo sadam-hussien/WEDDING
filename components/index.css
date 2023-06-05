@@ -1,0 +1,20 @@
+/* 
+  * import all css component 
+  * import this file in main css file 
+*/
+/* input with icon  */
+@import url(./form/inputWithIcon/index.css);
+/* textarea  */
+@import url(./form/textarea/index.css);
+/* select  */
+@import url(./form/selectBox/index.css);
+/* date  */
+@import url(./form/dateInput/index.css);
+/* radio  */
+@import url(./form/radioBox/index.css);
+/* checkbox  */
+@import url(./form/checkBox/index.css);
+/* alert  */
+@import url(./alert/index.css);
+/* buttons  */
+@import url(./buttons/index.css);

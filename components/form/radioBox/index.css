@@ -1,0 +1,68 @@
+.radio-input {
+  margin-bottom: var(--space-md);
+}
+
+.radio-input-label {
+  margin-bottom: var(--space-sm);
+  color: var(--dark);
+}
+
+.radio-input-box label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--bs-white);
+  height: 40px;
+  padding: 0 var(--space-sm);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border);
+  color: var(--gray);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.radio-input-box label:hover {
+  border-color: var(--primary);
+}
+
+.radio-input-circle {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border: inherit;
+  border-radius: 50%;
+  transition: 0.1s;
+}
+
+.radio-input-circle::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: var(--bs-white);
+  border-radius: inherit;
+}
+
+.radio-input-text {
+  /* color: ; */
+}
+
+.radio-input-box label:hover .radio-input-text {
+  color: var(--dark);
+}
+
+.radio-input-box input:checked + label {
+  border-color: var(--primary);
+}
+
+.radio-input-box input:checked + label .radio-input-circle::after {
+  background-color: var(--primary);
+}
+
+.radio-input-box input:disabled + label {
+  pointer-events: none;
+  background-color: #e9ecef;
+}
