@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section className="pt pb">
+    <section className="pt pb" id="service-section">
       <Container>
         <Row md={3} className="g-5">
           {services.map((item, index) => (

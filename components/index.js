@@ -8,6 +8,7 @@ export { default as RadioBox } from "./form/radioBox";
 export { default as CheckBox } from "./form/checkBox";
 export { default as DateInput } from "./form/dateInput";
 export { default as InputsHandler } from "./form/InputsHandler";
+export { default as DynamicFileUploaderInput } from "./form/dynamicFileUploaderInput";
 
 // core
 export { default as ButtonWithIcon } from "./buttons/ButtonWithIcon";

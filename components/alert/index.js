@@ -62,7 +62,10 @@ export function alertConfirmation({
 }
 
 // alert successfully
-export function alertSuccess({ title = "Good Job!", subtitle = "ok done" }) {
+export function alertSuccess({
+  title = "عمل رائع!",
+  subtitle = "تم العملية بنجاح",
+}) {
   MySwal.fire({
     html: <Success title={title} subtitle={subtitle} swal={MySwal} />,
     showConfirmButton: false,

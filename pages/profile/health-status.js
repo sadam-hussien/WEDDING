@@ -53,9 +53,9 @@ export default function HealthStatus() {
       <Formik
         initialValues={
           {
-            ...data.step_3,
-            disease_type: data.step_3?.disease_type
-              ? data.step_3?.disease_type.split(",")
+            ...data?.step_3,
+            disease_type: data?.step_3?.disease_type
+              ? data?.step_3?.disease_type.split(",")
               : "",
           } || namesOfInputs
         }

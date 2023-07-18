@@ -1,0 +1,14 @@
+.member-card-img {
+  width: 100px;
+  height: 100px;
+}
+
+.member-card {
+  /* padding: ; */
+}
+
+.member-card-btn {
+  color: var(--primary);
+  min-width: auto !important;
+  /* min-width: 120px; */
+}

@@ -50,7 +50,7 @@ export default function FinancialStatus() {
   return (
     <div>
       <Formik
-        initialValues={data.step_5 || namesOfInputs}
+        initialValues={data?.step_5 || namesOfInputs}
         onSubmit={handleSubmit}
       >
         {({ values }) => (
@@ -85,3 +85,19 @@ FinancialStatus.getLayout = function getLayout(page) {
     </HomeLayout>
   );
 };
+
+// if user is logged in redirect to home page
+export async function getServerSideProps({ req }) {
+  const isAuth = req.cookies.access_token;
+  if (!isAuth) {
+    return {
+      redirect: {
+        destination: "/auth",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
+}

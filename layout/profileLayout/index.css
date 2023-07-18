@@ -26,6 +26,7 @@
 
 .profile-layout-header {
   padding-bottom: var(--space-md);
+  padding-top: var(--space-sm);
 }
 
 .profile-layout-navbar-item {

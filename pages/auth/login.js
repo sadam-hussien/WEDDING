@@ -35,11 +35,19 @@ export default function Login() {
   const handleSubmit = (values) => {
     mutate(values, {
       onSuccess: (data) => {
-        Cookies.set("access_token", data.access_token, {
-          expires: data.expires_in,
-        });
-        dispatch(login(data));
-        router.push("/profile");
+        if (data?.data?.email_verified_at) {
+          Cookies.set("access_token", data.access_token, {
+            expires: data.expires_in,
+          });
+          dispatch(login(data));
+          router.push("/profile");
+        } else {
+          router.push(`/auth/verify-email?token=${data.access_token}`);
+        }
+      },
+      onError: (error) => {
+        // token=${res.access_token}
+        console.log(error);
       },
     });
   };

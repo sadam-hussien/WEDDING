@@ -57,7 +57,7 @@ export default function MarriageCulture() {
   return (
     <div>
       <Formik
-        initialValues={data.step_7 || namesOfInputs}
+        initialValues={data?.step_7 || namesOfInputs}
         onSubmit={handleSubmit}
       >
         {({ values }) => (
@@ -95,3 +95,18 @@ MarriageCulture.getLayout = function getLayout(page) {
     </HomeLayout>
   );
 };
+// if user is logged in redirect to home page
+export async function getServerSideProps({ req }) {
+  const isAuth = req.cookies.access_token;
+  if (!isAuth) {
+    return {
+      redirect: {
+        destination: "/auth",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
+}

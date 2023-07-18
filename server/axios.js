@@ -6,17 +6,13 @@ import Cookies from "js-cookie";
 
 import { logout } from "@/modules/auth/store";
 
-export default function Api() {
-  console.log(store);
-  const {
-    auth: { user },
-  } = store.getState();
+export default function Api(token) {
+  const tokenInCookes = token ? token : Cookies.get("access_token");
 
-  console.log(user);
   const appClient = axios.create({
     baseURL: process.env.NEXT_PUBLIC_BASE_URL,
     headers: {
-      Authorization: `Bearer ${user ? user.access_token : null}`,
+      Authorization: `Bearer ${tokenInCookes}`,
       Accept: "application/json",
       ContentType: "application/json",
       "Accept-Language": "ar",
@@ -28,7 +24,9 @@ export default function Api() {
       return response.data;
     },
     (error) => {
-      if (error?.response?.data?.message.includes("Unauthenticated")) {
+      const msg = error?.response?.data?.message || error?.response?.data?.msg;
+      const errors = ["Unauthenticated", "you don't have a verified email"];
+      if (errors.includes(msg)) {
         Cookies.remove("access_token");
         store.dispatch(logout());
         window.location.href = "/auth";

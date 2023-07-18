@@ -78,8 +78,8 @@ export default function MaritalStatus() {
       <Formik
         initialValues={
           {
-            ...data.step_2,
-            children_data: data.step_2?.children_data || [
+            ...data?.step_2,
+            children_data: data?.step_2?.children_data || [
               namesOfChildrenDataInputs,
             ],
           } || { ...namesOfInputs, children_data: [namesOfChildrenDataInputs] }

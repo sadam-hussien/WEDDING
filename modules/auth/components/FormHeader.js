@@ -8,7 +8,7 @@ export default function FormHeader({ title, link, path, noBack }) {
           href="/auth"
           className="back-btn d-inline-flex align-items-center justify-content-center"
         >
-          <i className={`las la-long-arrow-alt-$right`}></i>
+          <i className={`las la-long-arrow-alt-right`}></i>
         </Link>
       ) : (
         <div></div>

@@ -21,16 +21,20 @@ export const memberships = [
     title: "عضوية فضية",
     features: ["ذات متطلبات عادية فى الزوج بدون شروط خاصة"],
     price: "4$",
+    id: "gold",
+    id: "platinum",
   },
   {
     title: "عضوية ذهبية",
     features: ["ذات متطلبات غير عادية في الزوج وذات شروط خاصة"],
     price: "4$",
+    id: "gold",
   },
 
   {
     title: "عضوية ماسية",
     features: ["زواج المشاهير ورجال األعمال"],
     price: "4$",
+    id: "silver",
   },
 ];

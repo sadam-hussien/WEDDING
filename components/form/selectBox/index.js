@@ -2,8 +2,6 @@ import React from "react";
 
 import { ErrorMessage, useFormikContext } from "formik";
 
-import { useTranslation } from "react-i18next";
-
 import Select, { components } from "react-select";
 
 import { Form } from "react-bootstrap";

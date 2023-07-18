@@ -1,0 +1,132 @@
+.profile-layout {
+  padding-top: var(--space-lg);
+}
+
+.profile-layout-aside {
+  background: var(--bs-white);
+  box-shadow: var(--shadow-el);
+  padding: 0 var(--space-md) var(--space-md);
+  width: var(--sidebar-width);
+  position: fixed;
+  border-radius: var(--border-radius-sm);
+  height: calc(
+    100vh - (var(--header-height) + var(--space-lg) + var(--space-lg))
+  );
+  overflow-y: auto;
+}
+
+.search-layout::-webkit-scrollbar {
+  display: none;
+}
+
+.profile-layout-aside-name + span {
+  color: var(--gray);
+}
+
+.profile-layout-edit-avatar {
+  font-size: 22px;
+  color: var(--gray);
+}
+
+.profile-layout-header {
+  padding-bottom: var(--space-md);
+}
+
+.profile-layout-navbar-item {
+  transition: 0.3s;
+  background: transparent;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--space-md);
+  color: var(--gray);
+}
+
+.profile-layout-navbar-item:is(.active, :hover) {
+  padding: var(--space-sm) var(--space-md);
+  background-color: rgba(var(--primary-rgb) / 0.1);
+  color: var(--primary);
+}
+
+.profile-layout-content {
+  margin-inline-start: calc(var(--sidebar-width) + var(--space-lg));
+  min-height: calc(
+    100vh - (var(--header-height) + var(--space-lg) + var(--space-lg))
+  );
+}
+
+.filter-head {
+  padding: var(--space-md) 0;
+  margin-bottom: var(--space-md);
+  position: sticky;
+  z-index: 9;
+  top: 0;
+  background-color: var(--bs-white);
+
+  /* border-bottom: 1px ; */
+}
+
+.filter-head-title {
+  color: var(--dark);
+}
+
+.filter-head-submit {
+  background-color: var(--primary);
+  color: var(--bs-white);
+  padding: 0 20px 3px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-size: var(--font-size-sm);
+}
+
+.filter-label {
+  margin-bottom: var(--space-sm);
+  color: var(--dark);
+}
+
+.range-value-box {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0 5px;
+  background-color: rgba(var(--primary-rgb) / 1);
+  color: var(--bs-white);
+  font-size: var(--font-size-sm);
+  border-radius: 4px;
+}
+
+.range-slider {
+  height: 5px !important;
+  background: var(--light-bg) !important;
+}
+
+.range-slider__thumb:not([data-lower]) {
+  width: 18px !important;
+  height: 18px !important;
+  background: var(--primary) !important;
+}
+
+.range-slider__range {
+  background: var(--primary) !important;
+}
+
+.filter-body .radio-input-circle {
+  width: 15px;
+  height: 15px;
+}
+
+.filter-body .radio-input-circle::after {
+  inset: 3px;
+}
+
+.filter-body .radio-input-text {
+  font-size: 0.9rem;
+}
+
+.filter-body .radio-input-box {
+}
+
+.filter-body .radio-input-box label {
+  padding: 0 5px;
+  height: 30px;
+  gap: 5px !important;
+}

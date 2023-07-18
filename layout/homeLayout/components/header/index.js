@@ -12,15 +12,27 @@ export default function Header(props) {
 
         <div className="d-flex align-items-center gap-5">
           <ul className="main-header__nav list-unstyled m-0 p-0 d-flex align-items-center gap-4">
-            <li className="main-header__nav-item" data-link="about">
+            <Link
+              href="/#about-section"
+              className="main-header__nav-item"
+              data-link="about"
+            >
               من نحن
-            </li>
-            <li className="main-header__nav-item" data-link="about">
+            </Link>
+            <Link
+              href="/#service-section"
+              className="main-header__nav-item"
+              data-link="about"
+            >
               الخدمات
-            </li>
-            <li className="main-header__nav-item" data-link="subscriptions">
+            </Link>
+            <Link
+              href="/#membership-section"
+              className="main-header__nav-item"
+              data-link="subscriptions"
+            >
               الاشتراكات
-            </li>
+            </Link>
             <Link href="/members" className="main-header__nav-item">
               تصفح الاعضاء
             </Link>

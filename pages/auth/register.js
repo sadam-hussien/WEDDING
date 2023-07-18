@@ -53,8 +53,8 @@ export default function Register() {
         dob: handleDate(values.dob),
       },
       {
-        onSuccess: () => {
-          router.push("/auth");
+        onSuccess: (res) => {
+          router.push(`/auth/verify-email?token=${res.access_token}`);
         },
       }
     );

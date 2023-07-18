@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 export default function About() {
   return (
-    <section className="about-section box p-0">
+    <section className="about-section box p-0" id="about-section">
       <Container>
         <div className="pt pb">
           <h4 className="global-title">من نحن</h4>

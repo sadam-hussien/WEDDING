@@ -5,11 +5,14 @@
 @import url(@/modules/auth/style/index.css);
 @import url(@/modules/home/style/index.css);
 @import url(@/modules/profile/style/index.css);
+@import url(@/modules/members/style/index.css);
+@import url(@/modules/chat/style/index.css);
 
 /* layouts */
 @import url(@/layout/authLayout/index.css);
 @import url(@/layout/homeLayout/index.css);
 @import url(@/layout/profileLayout/index.css);
+@import url(@/layout/searchLayout/index.css);
 
 /* components  */
 @import url(@/components/index.css);
@@ -76,6 +79,14 @@ a {
 .alert-warning {
   background-color: rgba(var(--other-rgb) / 0.15);
   border-color: rgba(var(--other-rgb) / 0.5);
+}
+
+.single-thumb .range-slider__thumb[data-lower] {
+  width: 0;
+}
+
+.single-thumb .range-slider__range {
+  border-radius: 6px;
 }
 
 .mb-sm {
@@ -173,4 +184,23 @@ a {
 hr {
   border-color: var(--bs-border-color);
   opacity: 1;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

@@ -82,3 +82,20 @@
 .forget-passowrd:hover {
   color: var(--dark);
 }
+
+.resend-code-btn {
+  justify-content: flex-start !important;
+}
+
+.input-code {
+  width: 80px !important;
+  height: 90px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: var(--bs-white);
+}
+
+.input-code:focus {
+  border: 1px solid var(--primary) !important;
+  background-color: var(--bs-white) !important;
+}

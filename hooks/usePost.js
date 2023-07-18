@@ -16,7 +16,10 @@ export default function usePost({
       queryClient.invalidateQueries(queryKey);
       // create suceess alert
       if (alert) {
-        alertSuccess({ subtitle: data.data.message });
+        const msg =
+          data?.data?.message || data?.data?.msg || data?.message || data?.msg;
+        console.log(msg);
+        alertSuccess({ subtitle: msg });
       }
       if (onSuccess) {
         onSuccess();

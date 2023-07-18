@@ -52,7 +52,7 @@ export default function PersonalTraits() {
   return (
     <div>
       <Formik
-        initialValues={data.step_1 || namesOfInputs}
+        initialValues={data?.step_1 || namesOfInputs}
         onSubmit={handleSubmit}
       >
         {() => (

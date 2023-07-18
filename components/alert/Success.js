@@ -24,7 +24,7 @@ export default function Success({ title, subtitle, swal }) {
       <h4 className="confimation-alert-desc m-0 text-capitalize">{subtitle}</h4>
       <div className="confimation-alert-btns d-flex align-items-center justify-content-center">
         <ButtonWithIcon
-          title="ok"
+          title="اغلاق"
           icon="las la-check"
           onClick={() => swal.clickConfirm()}
         />
