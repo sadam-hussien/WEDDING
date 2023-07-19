@@ -15,5 +15,6 @@ let channelName = "user_" + userId;
 export const pusherSubscribe = pusherClient.subscribe(channelName);
 
 export const pusherGetMessage = (id) => {
+  console.log(typeof window, id);
   return pusherClient.subscribe(id);
 };

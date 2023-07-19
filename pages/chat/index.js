@@ -43,9 +43,15 @@ export default function Chat() {
     }
   }, [query?.id]);
 
+  console.log(currentConversationData);
+
   useEffect(() => {
-    if (Object.keys(currentConversationData).length) {
+    if (
+      Object.keys(currentConversationData).length &&
+      currentConversationData.chat_id
+    ) {
       console.log(currentConversationData.chat_id);
+      console.log("enter", currentConversationData.chat_id);
       pusherGetMessage(currentConversationData.chat_id).bind(
         "send-message-event",
         (data) => {

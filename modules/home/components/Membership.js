@@ -34,7 +34,7 @@ function PackageItem({ item }) {
       { package_type: id },
       {
         onSuccess: (res) => {
-          window.open(res.data.cashierUrl, "_blank");
+          window.location.href = res.data.cashierUrl;
         },
       }
     );
