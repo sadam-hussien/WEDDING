@@ -1,0 +1,21 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/auth/forget-password": "pages/auth/forget-password.html",
+  "/": "pages/index.html",
+  "/auth/login": "pages/auth/login.js",
+  "/auth/register": "pages/auth/register.js",
+  "/auth/verify-email": "pages/auth/verify-email.js",
+  "/auth/reset-password": "pages/auth/reset-password.js",
+  "/members": "pages/members.js",
+  "/chat": "pages/chat.js",
+  "/profile/financial-status": "pages/profile/financial-status.js",
+  "/profile/health-status": "pages/profile/health-status.js",
+  "/profile/marital-housing": "pages/profile/marital-housing.js",
+  "/profile/marriage-culture": "pages/profile/marriage-culture.js",
+  "/profile/marital-status": "pages/profile/marital-status.js",
+  "/profile/marriage-goal": "pages/profile/marriage-goal.js",
+  "/profile/personal-traits": "pages/profile/personal-traits.js",
+  "/404": "pages/404.html"
+}
