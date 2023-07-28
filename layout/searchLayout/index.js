@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect, cloneElement } from "react";
+import { useMemo, useState, useEffect, cloneElement, useRef } from "react";
 
 import { Accordion, Container } from "react-bootstrap";
 
@@ -31,10 +31,43 @@ export default function SearchLayout({ children }) {
       });
     }
   }
+
+  const profileLayoutContentRef = useRef(null);
+
+  const profileLayoutAsideRef = useRef(null);
+
+  let asideIsOpen = false;
+
+  function toggleSidebar() {
+    const profileLayoutAsideRefStyles = getComputedStyle(
+      profileLayoutAsideRef.current
+    );
+
+    const profileLayoutContentRefStyles = getComputedStyle(
+      profileLayoutContentRef.current
+    );
+
+    if (asideIsOpen) {
+      profileLayoutAsideRef.current.style.right = "-100%";
+      profileLayoutContentRef.current.style.transform = `translateX(0)`;
+    } else {
+      profileLayoutAsideRef.current.style.right =
+        profileLayoutContentRef.current.offsetLeft + "px";
+
+      profileLayoutContentRef.current.style.transform = `translateX(-${
+        parseInt(profileLayoutAsideRefStyles.width) + 20 + "px"
+      })`;
+    }
+
+    asideIsOpen = !asideIsOpen;
+  }
   return (
     <div className="profile-layout">
       <Container>
-        <aside className="profile-layout-aside search-layout">
+        <aside
+          className="profile-layout-aside search-layout"
+          ref={profileLayoutAsideRef}
+        >
           <Formik
             enableReinitialize
             initialValues={{
@@ -142,10 +175,20 @@ export default function SearchLayout({ children }) {
           </Formik>
         </aside>
 
-        <div className="profile-layout-content">
-          {cloneElement(children, {
-            queryIsEnabled,
-          })}
+        <div className="profile-layout-content" ref={profileLayoutContentRef}>
+          <button
+            type="button"
+            className="d-lg-none toggle-aside bg-transparent border-0 p-0 d-flex align-items-center gap-2"
+            onClick={toggleSidebar}
+          >
+            <i className="las la-bars"></i>
+            <span>القائمة</span>
+          </button>
+          <div>
+            {cloneElement(children, {
+              queryIsEnabled,
+            })}
+          </div>
         </div>
       </Container>
     </div>

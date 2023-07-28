@@ -1,8 +1,16 @@
 import Link from "next/link";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 
 export default function Header(props) {
   const { user } = useSelector((state) => state.auth);
+
+  const [menuIsActive, setMenuIsActive] = useState(false);
+
+  function toggleMenu() {
+    setMenuIsActive((prev) => !prev);
+  }
+
   return (
     <header className="main-header d-flex align-items-center" {...props}>
       <div className="container d-flex align-items-center justify-content-between">
@@ -10,12 +18,21 @@ export default function Header(props) {
           WE<span>logo</span>
         </Link>
 
-        <div className="d-flex align-items-center gap-5">
-          <ul className="main-header__nav list-unstyled m-0 p-0 d-flex align-items-center gap-4">
+        <div className="d-flex align-items-center gap-3 gap-lg-5">
+          <nav
+            className={`main-header__nav list-unstyled m-0 p-0 d-flex flex-column flex-lg-row align-items-lg-center gap-4 ${
+              menuIsActive ? "main-header__nav-isactive" : ""
+            }`}
+          >
+            <div
+              className="main-header__nav-overlay d-lg-none"
+              onClick={toggleMenu}
+            ></div>
             <Link
               href="/#about-section"
               className="main-header__nav-item"
               data-link="about"
+              onClick={toggleMenu}
             >
               من نحن
             </Link>
@@ -23,6 +40,7 @@ export default function Header(props) {
               href="/#service-section"
               className="main-header__nav-item"
               data-link="about"
+              onClick={toggleMenu}
             >
               الخدمات
             </Link>
@@ -30,13 +48,18 @@ export default function Header(props) {
               href="/#membership-section"
               className="main-header__nav-item"
               data-link="subscriptions"
+              onClick={toggleMenu}
             >
               الاشتراكات
             </Link>
-            <Link href="/members" className="main-header__nav-item">
+            <Link
+              href="/members"
+              className="main-header__nav-item"
+              onClick={toggleMenu}
+            >
               تصفح الاعضاء
             </Link>
-          </ul>
+          </nav>
 
           {user ? (
             <Link
@@ -56,6 +79,14 @@ export default function Header(props) {
               انشاء حساب
             </Link>
           )}
+
+          <button
+            type="button"
+            className="d-lg-none border-0 bg-transparent p-0 m-0 main-header__nav-toggle"
+            onClick={toggleMenu}
+          >
+            <i className="las la-bars"></i>
+          </button>
         </div>
       </div>
     </header>

@@ -13,6 +13,15 @@
     100vh - (var(--header-height) + var(--space-lg) + var(--space-lg))
   );
   overflow-y: auto;
+  transition: 0.3s;
+}
+
+@media (max-width: 991px) {
+  .profile-layout-aside {
+    right: -100%;
+    margin-top: 50px;
+    width: var(--sidebar-width-sm) !important;
+  }
 }
 
 .profile-layout-aside-name + span {
@@ -48,4 +57,16 @@
   min-height: calc(
     100vh - (var(--header-height) + var(--space-lg) + var(--space-lg))
   );
+  transition: 0.3s;
+}
+
+@media (max-width: 991px) {
+  .profile-layout-content {
+    margin-inline-start: 0 !important;
+  }
+}
+
+.toggle-aside {
+  margin-bottom: 20px;
+  font-size: 18px;
 }

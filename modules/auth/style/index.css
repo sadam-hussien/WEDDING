@@ -2,6 +2,12 @@
   padding: calc(var(--space-lg) * 2);
 }
 
+@media (max-width: 991px) {
+  .auth-page .auth-container {
+    padding: var(--space-lg);
+  }
+}
+
 /* header  */
 .auth-header {
   margin-bottom: var(--space-lg);

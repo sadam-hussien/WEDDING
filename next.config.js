@@ -9,11 +9,11 @@ const nextConfig = {
         destination: "/auth/login",
         permanent: false,
       },
-      {
-        source: "/profile",
-        destination: "/profile/personal-traits",
-        permanent: false,
-      },
+      // {
+      //   source: "/profile",
+      //   destination: "/profile/personal-traits",
+      //   permanent: false,
+      // },
     ];
   },
 };

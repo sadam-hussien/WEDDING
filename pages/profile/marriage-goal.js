@@ -12,6 +12,16 @@ export async function getServerSideProps({ req }) {
       },
     };
   }
+  const data = JSON.parse(req.cookies.data).package_type;
+
+  if (!data) {
+    return {
+      redirect: {
+        destination: "/#membership-section",
+        permanent: false,
+      },
+    };
+  }
   return {
     props: {},
   };

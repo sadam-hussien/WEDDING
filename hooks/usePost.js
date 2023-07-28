@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "react-query";
 
-import { alertSuccess, alertError } from "@/components";
+import { alertSuccess, alertError, Toast } from "@/components";
 
 export default function usePost({
   queryFn,
@@ -14,6 +14,7 @@ export default function usePost({
   return useMutation(queryFn, {
     onSuccess: (data) => {
       queryClient.invalidateQueries(queryKey);
+
       // create suceess alert
       if (alert) {
         const msg =
@@ -27,6 +28,9 @@ export default function usePost({
     },
     onError: (error) => {
       // create error alert
+      const errorMsg =
+        error?.data?.message || error?.data?.msg || error?.data?.error;
+      Toast({ icon: "error", title: errorMsg });
       if (alert) {
         alertError({ subtitle: error.data.error });
       }

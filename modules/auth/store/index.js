@@ -10,9 +10,19 @@ const auth = createSlice({
     logout: (state) => {
       state.user = null;
     },
+    savePhoto: (state, action) => {
+      state.user.data.profile_photo_url = action.payload;
+      // state.user = {
+      //   ...state.user,
+      //   data: {
+      //     ...state.user.data,
+
+      //   }
+      // }
+    },
   },
 });
 
 export default auth.reducer;
 
-export const { login, logout } = auth.actions;
+export const { login, logout, savePhoto } = auth.actions;

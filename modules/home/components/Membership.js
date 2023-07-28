@@ -11,7 +11,7 @@ export default function Membership() {
     <section className="pt pb" id="membership-section">
       <Container>
         <h4 className="global-title">اشترك معنا</h4>
-        <Row md={3} className="g-5">
+        <Row xs={1} md={2} lg={3} className="g-5">
           {memberships.map((item, index) => (
             <Col key={index} className="membership-box-wraaper">
               <PackageItem item={item} />

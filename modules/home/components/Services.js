@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <section className="pt pb" id="service-section">
       <Container>
-        <Row md={3} className="g-5">
+        <Row xs={1} md={2} lg={3} className="g-5">
           {services.map((item, index) => (
             <Col key={index} className="service-box-wraaper">
               <div className="service-box box h-100 d-flex flex-column align-items-center justify-content-center text-center">

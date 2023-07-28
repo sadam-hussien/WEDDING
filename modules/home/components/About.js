@@ -8,7 +8,7 @@ export default function About() {
         <div className="pt pb">
           <h4 className="global-title">من نحن</h4>
 
-          <Row md={2} className="g-5 align-items-center">
+          <Row xs={1} lg={2} className="g-5 align-items-center">
             <Col>
               <h4 className="about-title">لماذا تختار موقع ويدينج؟</h4>
               <h5 className="about-desc">
@@ -20,7 +20,7 @@ export default function About() {
               </h5>
             </Col>
 
-            <Col className="d-flex justify-content-end">
+            <Col className="d-flex justify-content-center justify-content-lg-end">
               <Image
                 alt=""
                 width={500}

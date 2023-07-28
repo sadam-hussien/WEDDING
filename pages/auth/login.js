@@ -39,6 +39,9 @@ export default function Login() {
           Cookies.set("access_token", data.access_token, {
             expires: data.expires_in,
           });
+          Cookies.set("data", JSON.stringify(data.data), {
+            expires: data.expires_in,
+          });
           dispatch(login(data));
           router.push("/profile");
         } else {
