@@ -7,6 +7,8 @@ import {
   About,
 } from "@/modules/home/components";
 
+import { api_get_packages } from "@/modules/home/server";
+
 export default function Home() {
   return (
     <section className="home-page">
